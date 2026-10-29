@@ -1,18 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 #define SIZE 5
+#include <stdlib.h>
 
 int main(void)
 {
-    int i;
+    int i, average;
+    int sum;
     int grade[SIZE];
-    printf("Enter the grade of five: \n");
 
-    for (i = 0; i < SIZE; i++)
-        scanf("%d", &grade[i]);
+    sum=0;
+    for(i=0;i<SIZE;i++){
 
-    for (i = 0; i < SIZE; i++)
-        printf("grade[%d] = %d\n", i, grade[i]);
+
+    printf("Enter the grade: \n");
+    scanf("%d", &grade[i]);
+    sum += grade[i];}
+
+    average = sum/SIZE;
+    printf("average: %d\n", average);
 
     return 0;
 }
